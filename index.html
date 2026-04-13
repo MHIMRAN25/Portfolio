@@ -3,33 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MR. M | Portfolio</title>
+    <title>ELITE MR. M | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="card">
-        <div class="profile-pic">
-            <img src="https://i.ibb.co.com/xKVYnBND/1000008008.jpg" alt="MR.M">
-        </div>
-        
-        <h1>MR. M</h1> 
-        <p class="subtitle">Honours 2nd Year (Management)</p>
-        <p class="quote">"No shortcuts, just hard work and patience."</p>
+    <div class="portfolio-app">
+        <header class="top-bar glass-effect">
+            <div class="left-icons">
+                <i class="fas fa-crown gold-text"></i>
+                <i class="fas fa-book"></i>
+                <i class="fas fa-moon"></i>
+            </div>
+            <h2 class="gold-text elite-name">ELITE MR. M</h2>
+            <div class="right-menu">
+                <i class="fas fa-bars" onclick="toggleMenu()" style="cursor:pointer;"></i>
+                <div id="menuContent" class="menu-dropdown glass-effect" style="display:none;">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="#tools"><i class="fas fa-tools"></i> Tools</a>
+                    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </div>
+        </header>
 
-        <div class="info-section">
-            <div class="item"><span>Nickname:</span> MR.M</div>
-            <div class="item"><span>Status:</span> Study + Job</div>
-            <div class="item"><span>Skills:</span> Node.js, JS, Bot Dev</div>
-        </div>
+        <main class="content-area">
+            <section class="profile-card glass-effect border-gold">
+                <div class="profile-pic-container">
+                    <img src="https://i.ibb.co.com/xKVYnBND/1000008008.jpg" alt="MR.M">
+                </div>
+                <h1 class="gold-text name">MR. M</h1>
+                <p class="subtitle">Honours 2nd Year (Management)</p>
+                <p class="quote">"No shortcuts, just hard work and patience."</p>
+            </section>
 
-        <div class="social-links">
-            <a href="https://www.facebook.com/mute.unmute.25" target="_blank">
-                <i class="fab fa-facebook"></i> Visit Facebook
-            </a>
-        </div>
+            <section class="info-section">
+                <h3 class="gold-text section-title">| PERSONAL PROFILE</h3>
+                <div class="info-list glass-effect">
+                    <div class="info-item"><i class="fas fa-user gold-text"></i> <div class="info-text"><span>Nickname:</span> MR.M</div></div>
+                    <div class="info-item"><i class="fas fa-briefcase gold-text"></i> <div class="info-text"><span>Status:</span> Study + Job</div></div>
+                    <div class="info-item"><i class="fas fa-code gold-text"></i> <div class="info-text"><span>Skills:</span> Node.js, Bot & Web Dev</div></div>
+                </div>
+            </section>
+
+            <section class="connect-section">
+                <h3 class="gold-text section-title">| CONNECT WITH ME</h3>
+                <div class="social-buttons-grid">
+                    <a href="https://www.facebook.com/mute.unmute.25" target="_blank" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/mute_unmute_25" target="_blank" class="social-btn insta"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/qr/KXA4ZLFSY7CWC1" target="_blank" class="social-btn wa"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:your_email@example.com" class="social-btn mail"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+        </main>
     </div>
 
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menuContent");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.fa-bars')) {
+                document.getElementById("menuContent").style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
